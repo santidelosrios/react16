@@ -23,7 +23,11 @@ module.exports = {
       { 
         test:/\.(js|jsx)$/, 
         use: 'babel-loader', 
-        exclude: '/node_modules/' }
+        exclude: '/node_modules/' },
+      {
+        test:/\.styl$/,
+        use: ['style-loader', 'css-loader', 'stylus-loader']
+      }
     ]
   },
   plugins: [
@@ -32,7 +36,7 @@ module.exports = {
     })
   ],
   resolve: {
-    extensions: ['.js', '.jsx', '.css']
+    extensions: ['.js', '.jsx', '.css', '.styl']
   }
 
 }
