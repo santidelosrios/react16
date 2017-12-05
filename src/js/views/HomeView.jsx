@@ -1,10 +1,12 @@
 import React, { PureComponent } from 'react'
 
+import MasterTemplate from './../HoCs/MasterTemplate'
 import './assets/stylesheets/home-styling'
 
-let couples = []
+import { Accesories } from './../components'
 
 class HomeView extends PureComponent {
+  
   constructor() {
     super()
     this.state = {
@@ -12,12 +14,14 @@ class HomeView extends PureComponent {
       mates: []
     }
 
-    this.setNumberOfMates = this.setNumberOfMates.bind(this)
+    this.handleNumberOfMates = this.handleNumberOfMates.bind(this)
     this.handleForm = this.handleForm.bind(this)
   }
 
-  setNumberOfMates(e) {
+  handleNumberOfMates(e) {
+    
     e.preventDefault()
+    
     let mates = []
     const numberOfMates = e.target.value
 
@@ -68,42 +72,47 @@ class HomeView extends PureComponent {
     const  { mates } = this.state
 
     let matesDOM = mates.map(mate => {
-      return <div className="dude" key={mate.id}>
-            <div className="name">
-              <input 
-                type="text" 
-                placeholder="m8's name"
-                ref={`name_${mate.id}`} />
-            </div>
-            {/*<div className="email">
-              <input 
-                type="email" 
-                placeholder="m8's email"
-                ref={`email_${mate.id}`} />
-            </div>*/}
+      return (
+        <div className="dude" key={mate.id}>
+          <div className="name">
+            <input 
+              type="text" 
+              placeholder="m8's name"
+              ref={`name_${mate.id}`} />
           </div>
+          {/*<div className="email">
+            <input 
+              type="email" 
+              placeholder="m8's email"
+              ref={`email_${mate.id}`} />
+          </div>*/}
+        </div>
+      )
     })
 
-    return <div className="home-content">
-      <section className="explanation">
-      Lorem ipsum dolor amet hell of sartorial biodiesel tacos vaporware, knausgaard blog tote bag snackwave mixtape meggings hot chicken letterpress everyday carry tbh.
-      </section>
-      <section className="dudes">
-        <h3>How many of you are going to play?</h3>
-        <input 
-          type="number" 
-          placeholder="# of m8s" 
-          onChange={this.setNumberOfMates} />
-        <section className="dudes-list">
-          {matesDOM}
-          <div className="match-button">
-            <button onClick={this.handleForm}>Match us</button>
-          </div>
+    return (
+      <div className="home-content">
+        <section className="explanation">
+        Lorem ipsum dolor amet hell of sartorial biodiesel tacos vaporware, knausgaard blog tote bag snackwave mixtape meggings hot chicken letterpress everyday carry tbh.
         </section>
-      </section>
-    </div>
+        <section className="dudes">
+          <h3>How many of you are going to play?</h3>
+          <input 
+            type="number" 
+            placeholder="# of m8s" 
+            onChange={this.handleNumberOfMates} />
+          <section className="dudes-list">
+            {matesDOM}
+            <div className="match-button">
+              <button onClick={this.handleForm}>Match us</button>
+            </div>
+          </section>
+          <Accesories/>
+        </section>
+      </div>
+    )
   }
 
 }
 
-export default HomeView
+export default MasterTemplate(HomeView)
