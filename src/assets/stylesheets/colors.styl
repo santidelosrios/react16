@@ -1,0 +1,136 @@
+//General 
+k-scrollbar-track = #e0e0e0
+k-scrollbar-background = #EFEFE
+k-soft-white = #f5f5f5
+k-soft-dark = #444444
+
+//kids
+kids-purple = #8e44ad
+kids-purple-soft = #9b59b6
+kids-blue = #2980b9
+kids-blue-soft = #3498db
+kids-green = #27ae60
+kids-green-soft = #6fc53a
+kids-yellow = #d35400
+kids-yellow-soft = #e67e22
+
+//Events
+k-blue = #20a6df
+k-blue-light = #66CEFA
+k-light-blue = #54d1ff
+k-new-blue = #419CFF
+k-button-blue = #257AD6
+kids-red = #c0392b
+kids-red-soft = #e74c3c
+
+//Messages
+k-green = #84B71C
+k-green-light = #A9D83E
+k-dark-green = #499115
+
+k-red = #f44336
+k-drivers-purple = #9f01ad
+k-drivers-purple-active = #680071
+k-purple = #653090
+
+//Yellow
+k-yellow = #ffc21d
+k-burnt = #FFA717
+k-assist = #f8a62e
+k-assist-dark = #ff851d
+k-assist-darker = #ff5f0a
+
+
+//grises TEXTO
+k-gray = #94979a
+k-gray-light = #b1b1b1
+k-gray-soft = #E8E8E8
+k-gray-dark = #696969
+k-gray-dark-4 = #8e8d8d
+k-gray-subject = #515960
+k-gray-soft-1 = #909090
+k-gray-soft-2 = #d7d7d7
+k-gray-soft-3 = #d8d8d8
+k-gray-soft-4 = #f9f9f9
+
+border-image(n)
+	border-image n
+	-webkit-border-image n
+	-moz-border-image n
+	-o-border-image n
+	-ms-border-image n
+
+b-radius(n)
+	border-radius n
+	-webkit-border-radius n
+	-moz-border-radius n
+	-o-border-radius n
+	-ms-border-radius n
+
+background-linear-gradient(direction, colorStart, colorFinish)
+	background linear-gradient(direction, colorStart, colorFinish)
+	background -moz-linear-gradient(direction, colorStart, colorFinish)
+	background -webkit-linear-gradient(direction, colorStart, colorFinish)
+
+c-filter(n)
+	filter n
+	-webkit-filter n
+	-moz-filter n
+	-o-filter n
+	-ms-filter n
+
+user-select(n)
+	user-select n
+	-webkit-user-select n
+	-moz-user-select n
+	-o-user-select n
+	-ms-user-select n
+
+transitions(secs)
+	transition all ease-out secs
+	-webkit-transition all ease-out secs
+	-moz-transition all ease-out secs
+	-o-transition all ease-out secs
+	-ms-transition all ease-out secs
+
+transitionsWhole(arg)
+	transition arg
+	-webkit-transition arg
+	-moz-transition arg
+	-o-transition arg
+	-ms-transition arg
+
+
+transform(data)
+	transform data
+	-webkit-transform data
+	-moz-transform data
+	-ms-transform data
+	-o-transform data
+
+box-shadow(n)
+	box-shadow n
+	-webkit-box-shadow n
+	-moz-box-shadow n
+	-ms-box-shadow n
+	-o-box-shadow n
+
+scroll-bar()
+	&::-webkit-scrollbar
+		width 5px
+		border-radius 10px
+										
+	&::-webkit-scrollbar-track
+		background-color k-scrollbar-background
+		border-radius 10px
+									
+	&::-webkit-scrollbar-button
+		display none
+
+	&::-webkit-scrollbar-thumb
+		background-color darkgrey
+		outline: 1px solid k-scrollbar-track
+		border-radius 10px
+									
+	&::-webkit-scrollbar-corner
+		display none

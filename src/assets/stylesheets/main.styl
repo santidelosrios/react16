@@ -1,0 +1,101 @@
+@import './colors'
+
+html,
+body
+	min-height 100% !important
+	height 100%
+	box-sizing border-box
+	font-size 1em
+	font-family 'Roboto', sans-serif
+	font-weight 300
+	// background-color #f2f2f2
+	background-color #f8f9fd
+
+html,
+html a
+	-webkit-font-smoothing antialiased
+	text-shadow 1px 1px 1px rgba(0,0,0,0.004)
+
+*,
+*:before,
+*:after
+	box-sizing inherit
+	padding 0
+	margin 0
+	outline none
+
+.buttonsDisplayFlex
+	display flex
+	flex-direction row
+	justify-content space-around
+.cf:before,
+.cf:after
+	content ""
+	display table
+.cf:after
+	clear both
+.cf
+	zoom 1
+
+.pull-left
+	float left !important
+
+.pull-right
+	float right !important
+
+// messages
+.color-green-soft
+	color kids-green-soft !important
+// reports
+.color-yellow-soft
+	color kids-yellow-soft !important
+
+label
+	margin-bottom 0
+
+p
+	margin 0 !important
+	flex 1
+pre
+	word-break break-all
+	word-wrap break-word
+	white-space normal
+	display flex
+	padding 9.5px
+	padding-left 0px
+	font-family 'Roboto', sans-serif
+	margin 0
+	font-size 1.2em
+	line-height normal 
+	background-color transparent
+	border none 
+	-webkit-border-radius 0px
+	border-radius 0px
+	overflow unset
+
+.tr
+	text-align right !important 
+.tl
+	text-align left !important
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select,
+textarea
+	padding 10px 15px
+	background-color #fff
+	border 1px solid #e4e4e4
+	b-radius(3px)
+	font-size 1em
+	width 100%
+	-webkit-appearance none
+	-moz-appearance none
+	resize none
+
+
+.clean-img
+	margin auto
+	display inline
+	border none
+	b-radius(0)

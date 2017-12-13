@@ -2,7 +2,7 @@ import React from 'react'
 import { render } from 'react-dom'
 
 import {
-  ASwitch
+  ModalAutocomplete
 } from './components'
 
-render(<div><ASwitch/></div>, document.getElementById('app'))
+render(<div><ModalAutocomplete color="#84B71C" /></div>, document.getElementById('app'))

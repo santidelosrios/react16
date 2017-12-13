@@ -1,5 +1,5 @@
-import ASwitch from './ASwitch/ASwitch'
+import ModalAutocomplete from './ModalAutocomplete/ModalAutocomplete'
 
 export {
-  ASwitch
+  ModalAutocomplete
 }
