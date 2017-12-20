@@ -118,12 +118,22 @@ export default class SearchBar extends PureComponent {
                                     <img className="clean-img" src={person.photo} />
                                   </div>
                                 : person.kids ?
-                                  <div className="kid-collage" style={person.kids === 1 ? {display: flex} : ''}>
-                                    
-                                  </div>
+                                  person.kids.map((kid, j) => {
+                                    if(j <=1) {
+                                      return (
+                                        <div key={j} className={`kid-collage ${j === person.kids.length -1 ? 'last' : ''}`} style={{display: person.kids === 1 ? flex: ''}}>
+                                          <img className="clean-img" src={person.photo} />
+                                        </div>
+                                      )
+                                    }
+                                  })
                                 : null
-
                               }
+                              <div className="parent-info">
+                                <div className="parent-name">
+                                  {`${person.name.trim().split(' ')[0]} ${person.lastname.trim().split(' ')[0]}`}
+                                </div>
+                              </div>
                             </div>
                           </li>
                         )

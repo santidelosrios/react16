@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 
-import './modalAutocomplete'
+import './modalAutocomplete.styl'
 import '../../../assets/stylesheets/api_v2'
 import '../../../assets/stylesheets/main'
 
